@@ -13,6 +13,7 @@ body{
 header{background-color: dodgerblue;}
 footer{background-color: black; color: whitesmoke; padding: 1em;}
 main{flex-grow: 1;}
+h2{margin-bottom: 0.5em;}
 
 /*CUSTOM COMPONENTS*/
 #root{
@@ -20,7 +21,7 @@ main{flex-grow: 1;}
 }
 
 /*FIELDSET - LEGEND*/
-fieldset{border-radius: 0.2em; padding: 0.3em;}
+fieldset{border-radius: 0.2em; padding: 0.3em; margin-bottom: 1em;}
 legend{border: 2px solid #9b9b9b; border-radius: 0.3em; padding: 0.2em 0.5em 0.2em 0.5em;}
 
 
@@ -62,4 +63,41 @@ legend{border: 2px solid #9b9b9b; border-radius: 0.3em; padding: 0.2em 0.5em 0.2
 .o-btn:hover{
   filter: saturate(1.8);
   /*transform: scale(1.05);*/
+}
+
+/* ACCORDION */
+/*Hover only*/
+.acc, .cacc{
+  position: relative;
+  text-align: start;
+  cursor: pointer;
+}
+.acc span, .cacc span{
+  position: absolute;
+  margin-left: .4em;
+  top: 0;
+  right: 0;
+  transition: transform .3s;
+}
+.acc-body, .cacc-body{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .5s;
+}
+.acc-body > div,.cacc-body > div{
+  overflow: hidden;
+}
+.acc:hover .acc-body, .cacc-active{
+  grid-template-rows: 1fr;
+}
+.acc:hover span{
+  transform: rotate(180deg);
+}
+
+/* Box Shadow */
+.b-shadow{
+  border-radius: .5em;
+  box-shadow: 4px 4px 6px 0 rgba(0,0,0,.15), -3px -3px 4px 0 hsla(0,0%,100%,.3);
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
 }
