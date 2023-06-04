@@ -14,6 +14,11 @@ header{background-color: dodgerblue;}
 footer{background-color: black; color: whitesmoke; padding: 1em;}
 main{flex-grow: 1;}
 h2{margin-bottom: 0.5em;}
+input[type="text"],input[type="number"],textarea, select{border:none;background-color: rgba(0,0,0,.05);border-radius: 0.3em;}
+input[type="text"]:focus,input[type="number"]:focus,textarea:focus,select:focus{box-shadow: 0 0 0 2px red inset;outline: none;}
+input[type="radio"]{
+  display: none;
+}
 
 /*CUSTOM COMPONENTS*/
 #root{
@@ -100,4 +105,103 @@ legend{border: 2px solid #9b9b9b; border-radius: 0.3em; padding: 0.2em 0.5em 0.2
   box-shadow: 4px 4px 6px 0 rgba(0,0,0,.15), -3px -3px 4px 0 hsla(0,0%,100%,.3);
   background-color: #fff;
   border: 1px solid #f5f5f5;
+}
+
+
+/* INPUT RANGE */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 0.5em;
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 0.3em;
+  background: #fa946f;
+  cursor: ew-resize;
+}
+input[type="range"]::-moz-range-thumb, input[type="range"]::-ms-thumb, input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 0.3em;
+  background: #ff4500;
+  cursor: ew-resize;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover{height: 1.1em; width: 1.1em;}
+input[type="range"]::-webkit-slider-thumb:active{height: 1.2em; width: 1.2em;}
+input[type="range"]::-webkit-slider-thumb:hover, input[type="range"]::-moz-range-thumb:hover, input[type="range"]::-ms-thumb:hover{
+  background: red;
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track , input[type=range]::-moz-range-track, input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* Input Radio*/
+
+.custom-radio-btn {
+  --size: 25px;
+  max-width: calc(25px * 3.5);
+  min-width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px;
+  position: relative;
+  padding-left: calc(var(--size) + 0.6em);
+}
+
+.custom-radio-btn.left { /* handle if you want label on the left of the checkmark instead */
+  padding-left: 0;
+  padding-right: var(--size);
+}
+.custom-radio-btn.left .label {
+  margin: 0 5px;
+}
+
+
+.custom-radio-btn .checkmark { /* checkmark */
+  --gap: 1px;
+  --border: 2px;
+  --check-color: #ff5722;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 40%;
+  display: inline-block;  
+  border: var(--border) solid #444;
+  padding: var(--gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-radio-btn.left .checkmark {
+  left: auto;
+  right: 0;
+}
+
+.custom-radio-btn input:checked ~ .checkmark {
+  /* changes from the video  */
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at center, 
+    var(--check-color) 
+     /* the size of the check mark is determined by subtracting from the size of the circle
+     the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+       calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2), 
+    rgba(255, 255, 255, 0) 0);
 }

@@ -59,6 +59,68 @@ function App() {
           <BAccordion/>
         </fieldset>
       </section>
+      <hr />
+      <section className="p-2">
+        <h2>Forms and Input fields</h2>
+        <fieldset>
+          <legend className="m-2">Input text</legend>
+          <label htmlFor="text-field">Text Field: </label>
+          <input type="text" name="text-field" id="text-field" className="p-2"/>
+          <label htmlFor="text-area">Text Area: </label>
+          <textarea name="text-area" id="text-area" cols={30} rows={10}></textarea>
+          <label htmlFor="numbers">Numbers: </label>
+          <input type="number" name="numbers" id="numbers" className="p-2"/>
+
+        </fieldset>
+        <fieldset>
+          <legend className="m-2">Input radio</legend>
+          <div style={{border:'1px solid #000'}} className="p-2">
+            <label className="m-2 custom-radio-btn">
+              <span className="label">Opcion A</span>
+              <input type="radio" name="two-ways" value={1}/>
+              <span className="checkmark"></span>
+            </label>
+            <label className="m-2 custom-radio-btn left">
+              <span className="label">Opcion B</span>
+              <input type="radio" name="two-ways" value={2}/>
+              <span className="checkmark"></span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend className="m-2">Input range</legend>
+          <div style={{border:'1px solid #000'}} className="p-2">
+            <label htmlFor="range-value" className="m-2">Horizontal
+              <input type="range" id="range-value" name="range-value" min={0} max={10} step={0.5}/>
+            </label>
+          </div>
+          <div style={{border:'1px solid #000', height:'10em', display:'flex', alignItems:'center'}} className="p-2">
+            <label htmlFor="range-value-v" className="m-2">Vertical
+              <input type="range" id="range-value-v" name="range-value-v" min={0} max={10} step={0.5} style={{transform:'rotate(270deg)'}}/>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend className="m-2">Select</legend>
+          <div style={{border:'1px solid #000'}} className="p-2">
+            <label htmlFor="selects" className="m-2">Select values: 
+              <select name="select-values" id="select-values" className="p-1">
+                <optgroup label="123" style={{outline:'solid #000'}}>
+                  <option value="1">1</option>
+                  <option value="1">2</option>
+                  <option value="1">3</option>
+                </optgroup>
+                <optgroup label="45">
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </optgroup>
+                <option value="6">6</option>
+                <optgroup label="123" style={{backgroundColor:'red'}}>final</optgroup>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+      </section>
     </main>
   )
 }
