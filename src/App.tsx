@@ -121,6 +121,44 @@ function App() {
           </div>
         </fieldset>
       </section>
+      <hr />
+      <section className="p-2">
+        <h2>Offcanvas & Translate elements</h2>
+        <fieldset>
+          <legend className="m-2">Window</legend>
+        </fieldset>
+        <fieldset>
+          <legend className="m-2">Contained</legend>
+        </fieldset>
+      </section>
+      <hr />
+      <section className="p-2">
+        <h2>Fieldets</h2>
+        <fieldset>
+          <legend className="m-2 fset-anm">Legend: (0,0)</legend>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          </div>
+        </fieldset>
+        <fieldset className="scale-x-1">
+          <legend className="m-2 scale-x-1 fset-anm-1">Legend: (-1,0)</legend>
+          <div className="scale-x-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          </div>
+        </fieldset>
+        <fieldset className="scale-y-1">
+          <legend className="m-2 scale-y-1 fset-anm-1">Legend: (0,-1)</legend>
+          <div className="scale-y-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          </div>
+        </fieldset>
+        <fieldset className="scale-xy-1">
+          <legend className="m-2 scale-xy-1 fset-anm">Legend: (-1,-1)</legend>
+          <div className="scale-xy-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          </div>
+        </fieldset>
+      </section>
     </main>
   )
 }

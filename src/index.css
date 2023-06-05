@@ -27,7 +27,15 @@ input[type="radio"]{
 
 /*FIELDSET - LEGEND*/
 fieldset{border-radius: 0.2em; padding: 0.3em; margin-bottom: 1em;}
-legend{border: 2px solid #9b9b9b; border-radius: 0.3em; padding: 0.2em 0.5em 0.2em 0.5em;}
+legend{border: 2px solid #9b9b9b; border-radius: 0.3em; padding: 0.2em 0.5em 0.2em 0.5em; transition: rotate 0.3s;}
+
+/*Fieldets Customizados*/
+.fset-anm{rotate:-3deg;}.fset-anm-1{rotate:3deg;}
+fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
+.scale-x-1{transform: scaleX(-1);}
+.scale-y-1{transform: scaleY(-1);}
+.scale-xy-1{transform: matrix(-1, 0, 0, -1, 0, 0);}
+.scale-xy{transform: matrix(1, 0, 0, 1, 0, 0);}
 
 
 /*BOTONES*/
