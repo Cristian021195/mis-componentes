@@ -1,4 +1,5 @@
 import { Accordion, BAccordion } from "./Components"
+import reactlogo from "./assets/react.svg"
 
 function App() {
   /*Siguientes componentes - forms, inputs, selects, dropdowns, navbar, transate divs up-down-left-right*/
@@ -126,6 +127,70 @@ function App() {
         <h2>Offcanvas & Translate elements</h2>
         <fieldset>
           <legend className="m-2">Window</legend>
+          <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
+            <circle xmlns="http://www.w3.org/2000/svg" cx="50" cy="50" r="40" fill="none" stroke="#000" strokeDasharray="174.35839227423352 60.119464091411174" strokeWidth="14">
+              <animateTransform attributeName="transform" dur="1s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
+            </circle>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="20">
+              <animate
+                attributeType="XML"
+                attributeName="r"
+                from="0"
+                to="40"
+                dur="1s"
+                fill="fill"
+                repeatCount="indefinite" />
+            </circle>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 40 10" style={{margin:'auto'}}>
+            <rect fill="black" width="10" height="10" x="0" y="0">
+                <animateTransform attributeName="transform" 
+                                  begin="1s"
+                                  dur="2s"
+                                  type="translate"
+                                  from="0 0"
+                                  to="0 0"
+                                  repeatCount="indefinite"
+                                  fill="freeze"
+                                  calcMode="spline"
+                                  keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
+                                  values="0;30;0"/>
+            </rect>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto", backgroundColor:'red' }} width="50" height="25" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
+            <circle cx="0" cy="50" r="40" fill="black" x="0" y="0">
+                <animateTransform attributeName="transform" 
+                                  begin="1s"
+                                  dur="2s"
+                                  type="translate"
+                                  from="0 0"
+                                  to="0 0"
+                                  repeatCount="indefinite"
+                                  fill="freeze"
+                                  calcMode="spline"
+                                  keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
+                                  values="0;100;0"/>
+            </circle>
+          </svg>
+          <div>
+            <img src={reactlogo} alt="alt" className="ipulse" style={{display:'block', margin: "auto"}}/>
+          </div>
+
+          <div>
+            <div className="skeleton" style={{width:'10em', height:'5em', display:'block', margin:'auto'}}></div>
+          </div>
+          <div>
+            <div className="oskeleton" style={{width:'10em', height:'5em', display:'block', margin:'auto'}}></div>
+          </div>
+
+          <div>
+              <div className="circle pulse" style={{backgroundColor:'red', width:'1.2em', height:'1.2em', display:'block'}}></div>
+          </div>
+
         </fieldset>
         <fieldset>
           <legend className="m-2">Contained</legend>
