@@ -124,7 +124,7 @@ function App() {
       </section>
       <hr />
       <section className="p-2">
-        <h2>Offcanvas & Translate elements</h2>
+        <h2>Loaders</h2>
         <fieldset>
           <legend className="m-2">Window</legend>
           <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
@@ -198,12 +198,40 @@ function App() {
       </section>
       <hr />
       <section className="p-2">
+        <h2>Offcanvas & Translate elements</h2>
+        <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Basic Card</legend>
+          <article className="card">
+            <div className="card-h d-flex">
+              <img src="https://fastly.picsum.photos/id/220/300/200.jpg?hmac=hSpCnndQS-mcDCoNofXR1qu9UvK-W1OnP6212H6w8Ds" alt="alt"/>
+            </div>
+            <div className="card-b p-3 d-flex">
+              <small>TRAVEL</small>
+              <b>Trip planing for total begginers</b>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+            </div>
+          </article>
+          <article className="vcard pt-3">
+            <div className="card-h d-flex">
+              <img src="https://fastly.picsum.photos/id/111/200/300.jpg?hmac=bXXQTtXTex0m2Ogp23o7VFcNHAllTfE-8eSPYK2GeGM" alt="alt"/>
+            </div>
+            <div className="card-b p-3 d-flex">
+              <small>TRAVEL</small>
+              <b>Trip planing for total begginers</b>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+            </div>
+          </article>
+        </fieldset>
+        <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Hovered / Active Cards</legend>
+        </fieldset>
+      </section>
+      <hr />
+      <section className="p-2">
         <h2>Fieldets</h2>
         <fieldset>
           <legend className="m-2 fset-anm">Legend: (0,0)</legend>
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
-          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
         </fieldset>
         <fieldset className="scale-x-1">
           <legend className="m-2 scale-x-1 fset-anm-1">Legend: (-1,0)</legend>

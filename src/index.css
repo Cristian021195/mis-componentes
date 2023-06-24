@@ -115,6 +115,36 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   border: 1px solid #f5f5f5;
 }
 
+/* CARDS */
+.card{background-color: coral;
+  min-width: 18em;
+  max-width: 12em;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;}
+  .vcard{background-color: coral;
+    min-width: 12em;
+    max-width: 15em;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.card-h{
+  /*object-fit:cover;
+  border-radius:1rem 1rem 0 0*/
+}
+.card-b{
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.card-h img{
+  object-fit:cover;
+  border-radius:1rem 1rem 0 0;
+  width: 100%;
+}
+
 
 /* INPUT RANGE */
 input[type="range"] {
