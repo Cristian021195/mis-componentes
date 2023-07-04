@@ -37,7 +37,6 @@ function App() {
               </div>
             </div>
           </article>
-
           <article className="p-3 b-shadow mb-4 w-100">
             <div className="acc">
               <div className="acc-body">
@@ -141,6 +140,9 @@ function App() {
                 to="40"
                 dur="1s"
                 fill="fill"
+                keySplines="0.1 0.8 0.2 1;0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+		            keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+		            calcMode="spline"
                 repeatCount="indefinite" />
             </circle>
           </svg>
@@ -224,6 +226,32 @@ function App() {
         </fieldset>
         <fieldset className="d-flex" style={{gap:'1rem'}}>
           <legend className="m-2">Hovered / Active Cards</legend>
+        </fieldset>
+        <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Directional Offcanvas</legend>
+          <article className="mb-4" style={{borderRadius:'0.5rem', width:'15rem', height:'15rem', position:'relative', backgroundImage:'url(https://picsum.photos/200)',
+          backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+            <fieldset className="acc" style={{borderRadius:'0.5rem', position:'absolute', bottom: '0px',border:'none',backgroundColor:'rgba(255, 255, 255, 0.5)'}}>
+              <legend style={{backgroundColor:'white',border:'none'}}><h4>Product #1</h4></legend>
+              <div className="acc-body">
+                <div>
+                  <p>I reply mails, and messages quickly as possible, but remember I’m from Argentina (GMT-3). So if you not get any response now I’ll reply you next morning for sure.</p>
+                </div>
+              </div>
+            </fieldset>
+          </article>
+        </fieldset>
+        <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Title Card</legend>
+          <div className="crd card--examples card--examples--3" style={{borderTop:'4px solid blue', display:'flex',flexDirection:'column', justifyContent:'space-between'}}>
+            <div className="p-1">
+              <p className="card__title">C Library Function</p>
+              <p className="card__description">C isxdigit()</p>
+            </div>
+            <div style={{position:'relative'}}>
+              <img src="https://www.programiz.com/sites/all/themes/programiz/dist/images/7711e5083bb90c72322258533cdd8881.svg" alt="corner" style={{position:'absolute', right:0, bottom:'0', borderBottomRightRadius:'0.5rem'}}/>
+            </div>
+          </div>
         </fieldset>
       </section>
       <hr />
