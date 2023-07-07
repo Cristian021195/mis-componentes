@@ -8,25 +8,33 @@ function App() {
       <h1 className="mb-4">Mis Componentes</h1>
       <section className="p-2">
         <h2>Botones</h2>
+
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Principales</legend>
           <button className="btn p-2" style={{backgroundColor:'dodgerblue'}}>Azul</button>
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Outlined</legend>
           <button className="o-btn p-2" style={{border:'2px solid dodgerblue'}}>Azul</button>
         </fieldset>
+        </article>
+
       </section>
       <hr />
       <section className="p-2">
         <h2>Acordeon</h2>
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Hover Only</legend>
           <div className="mb-2">
             <p>(no Javascript neccesary, nice to small devices)</p>
           </div>
 
-          <article className="p-3 b-shadow mb-4 w-100">
+          <div className="p-3 b-shadow mb-4 w-100">
             <div className="acc">
               <h4>I can get in touch with you any time?</h4>
               <span className="">▼</span>
@@ -36,8 +44,8 @@ function App() {
                 </div>
               </div>
             </div>
-          </article>
-          <article className="p-3 b-shadow mb-4 w-100">
+          </div>
+          <div className="p-3 b-shadow mb-4 w-100">
             <div className="acc">
               <div className="acc-body">
                 <div>
@@ -46,10 +54,12 @@ function App() {
               </div>
               <h4>I can get in touch with you any time?</h4>
             </div>
-          </article>
+          </div>
 
         </fieldset>
+        </article>
 
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Click Only</legend>
           <div className="mb-2">
@@ -58,10 +68,14 @@ function App() {
           <Accordion/>
           <BAccordion/>
         </fieldset>
+        </article>
+
       </section>
       <hr />
       <section className="p-2">
         <h2>Forms and Input fields</h2>
+        
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Input text</legend>
           <label htmlFor="text-field">Text Field: </label>
@@ -70,8 +84,10 @@ function App() {
           <textarea name="text-area" id="text-area" cols={30} rows={10}></textarea>
           <label htmlFor="numbers">Numbers: </label>
           <input type="number" name="numbers" id="numbers" className="p-2"/>
-
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Input radio</legend>
           <div style={{border:'1px solid #000'}} className="p-2">
@@ -87,6 +103,9 @@ function App() {
             </label>
           </div>
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Input range</legend>
           <div style={{border:'1px solid #000'}} className="p-2">
@@ -100,6 +119,9 @@ function App() {
             </label>
           </div>
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Select</legend>
           <div style={{border:'1px solid #000'}} className="p-2">
@@ -120,10 +142,12 @@ function App() {
             </label>
           </div>
         </fieldset>
+        </article>
       </section>
       <hr />
       <section className="p-2">
         <h2>Loaders</h2>
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Window</legend>
           <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
@@ -181,29 +205,32 @@ function App() {
           <div>
             <img src={reactlogo} alt="alt" className="ipulse" style={{display:'block', margin: "auto"}}/>
           </div>
-
           <div>
             <div className="skeleton" style={{width:'10em', height:'5em', display:'block', margin:'auto'}}></div>
           </div>
           <div>
             <div className="oskeleton" style={{width:'10em', height:'5em', display:'block', margin:'auto'}}></div>
           </div>
-
           <div>
               <div className="circle pulse" style={{backgroundColor:'red', width:'1.2em', height:'1.2em', display:'block'}}></div>
           </div>
-
         </fieldset>
+        </article>
+        <article className="m-4">
         <fieldset>
           <legend className="m-2">Contained</legend>
         </fieldset>
+        </article>
+
       </section>
       <hr />
       <section className="p-2">
         <h2>Offcanvas & Translate elements</h2>
+        <article className="m-4">
         <fieldset className="d-flex" style={{gap:'1rem'}}>
           <legend className="m-2">Basic Card</legend>
-          <article className="card">
+          <div className="d-flex flex-wrap">
+          <div className="card">
             <div className="card-h d-flex">
               <img src="https://fastly.picsum.photos/id/220/300/200.jpg?hmac=hSpCnndQS-mcDCoNofXR1qu9UvK-W1OnP6212H6w8Ds" alt="alt"/>
             </div>
@@ -212,8 +239,8 @@ function App() {
               <b>Trip planing for total begginers</b>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
             </div>
-          </article>
-          <article className="vcard pt-3">
+          </div>
+          <div className="vcard pt-3">
             <div className="card-h d-flex">
               <img src="https://fastly.picsum.photos/id/111/200/300.jpg?hmac=bXXQTtXTex0m2Ogp23o7VFcNHAllTfE-8eSPYK2GeGM" alt="alt"/>
             </div>
@@ -222,25 +249,30 @@ function App() {
               <b>Trip planing for total begginers</b>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
             </div>
-          </article>
+          </div>
+          </div>          
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset className="d-flex" style={{gap:'1rem'}}>
-          <legend className="m-2">Hovered / Active Cards</legend>
-        </fieldset>
-        <fieldset className="d-flex" style={{gap:'1rem'}}>
-          <legend className="m-2">Directional Offcanvas</legend>
-          <article className="mb-4" style={{borderRadius:'0.5rem', width:'15rem', height:'15rem', position:'relative', backgroundImage:'url(https://picsum.photos/200)',
+          <legend className="m-2">Information Cards / Fielsets Cards</legend>
+          <div className="mb-4" style={{borderRadius:'0.5rem', width:'15rem', height:'15rem', position:'relative', backgroundImage:'url(https://picsum.photos/200)',
           backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
-            <fieldset className="acc" style={{borderRadius:'0.5rem', position:'absolute', bottom: '0px',border:'none',backgroundColor:'rgba(255, 255, 255, 0.5)'}}>
-              <legend style={{backgroundColor:'white',border:'none'}}><h4>Product #1</h4></legend>
+            <fieldset className="acc hc-w">
+              <legend ><h4>Product #1</h4></legend>
               <div className="acc-body">
                 <div>
                   <p>I reply mails, and messages quickly as possible, but remember I’m from Argentina (GMT-3). So if you not get any response now I’ll reply you next morning for sure.</p>
                 </div>
               </div>
             </fieldset>
-          </article>
+          </div>
         </fieldset>
+        </article>
+
+
+        <article className="m-4">
         <fieldset className="d-flex" style={{gap:'1rem'}}>
           <legend className="m-2">Title Card</legend>
           <div className="crd card--examples card--examples--3" style={{borderTop:'4px solid blue', display:'flex',flexDirection:'column', justifyContent:'space-between'}}>
@@ -253,32 +285,81 @@ function App() {
             </div>
           </div>
         </fieldset>
+        </article>
+
+        <article className="m-4">
+          <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Hovered / Active Cards</legend>
+          </fieldset>
+        </article>
+        <article className="m-4">
+          <fieldset className="d-flex" style={{gap:'1rem'}}>
+          <legend className="m-2">Slide Images Card (Mobile better)</legend>
+
+          <div className="flex">
+            <div className="cat-container scroll-snap">
+              <div className="cat-wrapper">
+                <div className="cat-pic">
+                  <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"/>
+                </div>
+                <div className="cat-pic">
+                  <img src="https://images.unsplash.com/photo-1611267254323-4db7b39c732c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                </div>
+                <div className="cat-pic">
+                  <img src="https://images.unsplash.com/photo-1583083527882-4bee9aba2eea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                </div>
+                <div className="cat-pic">
+                  <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                </div>
+                <div className="cat-pic">
+                  <img src="https://images.unsplash.com/photo-1572590285030-0ae6a4715671?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </fieldset>
+        </article>
+
       </section>
       <hr />
       <section className="p-2">
         <h2>Fieldets</h2>
-        <fieldset>
+
+        <article className="m-4">
+          <fieldset>
           <legend className="m-2 fset-anm">Legend: (0,0)</legend>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
-        </fieldset>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset className="scale-x-1">
           <legend className="m-2 scale-x-1 fset-anm-1">Legend: (-1,0)</legend>
           <div className="scale-x-1">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
           </div>
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset className="scale-y-1">
           <legend className="m-2 scale-y-1 fset-anm-1">Legend: (0,-1)</legend>
           <div className="scale-y-1">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
           </div>
         </fieldset>
+        </article>
+
+        <article className="m-4">
         <fieldset className="scale-xy-1">
           <legend className="m-2 scale-xy-1 fset-anm">Legend: (-1,-1)</legend>
           <div className="scale-xy-1">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
           </div>
         </fieldset>
+        </article>
+
       </section>
     </main>
   )

@@ -9,13 +9,29 @@
 
   </head>
   <body>
-    <header>
-      <ul>
-        <li>#Elemento 1</li>
-        <li>#Elemento 2</li>
-        <li>#Elemento 3</li>
-        <li>#Elemento 4</li>
-        <li>#Elemento 5</li>
+    <header class="mb-4">
+      <ul class="container d-flex justify-content-end py-3">
+        <li class="m-2"><a href="#">Inicio</a></li>
+        <li class="m-2"><a href="#">Sobre Mí</a></li>
+        <li class="m-2 acc" style="position: relative;">
+          <a href="#" class="btn p-2">Componentes</a>
+          <ul class="p-2" style="background-color: #1E90FF; position: absolute; width: 100%; border-radius: 0.3rem; margin-top: 0.3rem;">
+            <!-- position: relative; en caso de mobile -->
+            <div class="accs-body">
+              <li>Sublink 1</li>
+            </div>
+            <div class="accs-body">
+              <li>Sublink 2</li>
+            </div>            
+            <div class="accs-body">
+              <li>Sublink 3</li>
+            </div>
+            <!--<li class="accs-body">Sublink 1</li>
+            <li class="accs-body">Sublink 2</li>
+            <li class="accs-body">Sublink 3</li>-->
+          </ul>
+        </li>
+        <li class="m-2"><a href="#">Contacto</a></li>
       </ul>
     </header>
     <div id="root"></div>

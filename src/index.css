@@ -10,8 +10,10 @@
 body{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-header{background-color: dodgerblue;}
-footer{background-color: black; color: whitesmoke; padding: 1em;}
+header{background-color: dodgerblue; width: 100%;}
+header ul li{list-style: none; color:whitesmoke}
+header ul li a{color:whitesmoke; text-decoration: none; font-weight: bold; font-size: 1.2rem;}
+footer{background-color: black; color: whitesmoke; padding: 1em; width: 100%;}
 main{flex-grow: 1;}
 h2{margin-bottom: 0.5em;}
 input[type="text"],input[type="number"],textarea, select{border:none;background-color: rgba(0,0,0,.05);border-radius: 0.3em;}
@@ -92,15 +94,18 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   right: 0;
   transition: transform .3s;
 }
-.acc-body, .cacc-body{
+.acc-body, .cacc-body, .accs-body{
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows .5s;
 }
+.accs-body > *{
+  overflow: hidden;
+}
 .acc-body > div,.cacc-body > div{
   overflow: hidden;
 }
-.acc:hover .acc-body, .cacc-active{
+.acc:hover .acc-body, .acc:hover .accs-body, .cacc-active{
   grid-template-rows: 1fr;
 }
 .acc:hover span{
@@ -158,6 +163,48 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   background-repeat: no-repeat;
   padding-top: 12px;
   color: rgba(37,38,94,.7);
+}
+.hc-w{
+  border-radius:0.5rem;
+  position:absolute;
+  bottom: 0px;
+  border:none;
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+.hc-w legend{
+  background-color:white;
+  border: 2px solid whitesmoke;
+}
+.hc-w:hover{
+  background-color: whitesmoke!important;
+  transition: ease-in-out 0.5s;
+}
+.cat-container {
+  width: 300px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: auto;
+  height: 20rem;
+}
+.scroll-snap {
+  scroll-snap-type: x mandatory;
+}
+.cat-wrapper {
+  width: 150rem;
+  display: flex;
+  justify-content: start;
+}
+.cat-pic {
+  display: flex;
+  width: 500px;
+  overflow: hidden;
+  height: 20rem;
+  scroll-snap-align: center;
+}
+.cat-pic img {
+  object-fit: cover;
+  width: 100%;
 }
 
 
@@ -263,6 +310,8 @@ input[type=range]::-webkit-slider-runnable-track , input[type=range]::-moz-range
   -webkit-animation: ipulse 1s ease-in-out infinite normal;
   animation: ipulse 1s ease-in-out infinite normal;
 }
+
+
 
 
 @-webkit-keyframes ipulse {
