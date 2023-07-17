@@ -151,11 +151,11 @@ function App() {
         <fieldset>
           <legend className="m-2">Window</legend>
           <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
-            <circle xmlns="http://www.w3.org/2000/svg" cx="50" cy="50" r="40" fill="none" stroke="#000" strokeDasharray="174.35839227423352 60.119464091411174" strokeWidth="14">
+            <circle xmlns="http://www.w3.org/2000/svg" cx="50" cy="50" r="40" fill="none" stroke="red" strokeDasharray="174.35839227423352 60.119464091411174" strokeWidth="14">
               <animateTransform attributeName="transform" dur="1s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
             </circle>
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
+          <svg fill="red" xmlns="http://www.w3.org/2000/svg" style={{ margin: "auto" }} width="50" height="50" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="20">
               <animate
                 attributeType="XML"
@@ -163,6 +163,7 @@ function App() {
                 from="0"
                 to="40"
                 dur="1s"
+                stroke="red"
                 fill="fill"
                 keySplines="0.1 0.8 0.2 1;0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
 		            keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
