@@ -4,7 +4,7 @@ import reactlogo from "./assets/react.svg"
 function App() {
   /*Siguientes componentes - forms, inputs, selects, dropdowns, navbar, transate divs up-down-left-right*/
   return (
-    <main className="container">
+    <main className="p-2">
       <h1 className="mb-4">Mis Componentes</h1>
       <section className="p-2">
         <h2>Botones</h2>
@@ -295,7 +295,7 @@ function App() {
         </article>
         <article className="m-4">
           <fieldset className="d-flex" style={{gap:'1rem'}}>
-          <legend className="m-2">Slide Images Card (Mobile better)</legend>
+          <legend className="m-2">Slide Images (Mobile better)</legend>
 
           <div className="flex">
             <div className="cat-container scroll-snap">

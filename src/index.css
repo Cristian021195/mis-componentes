@@ -10,16 +10,50 @@
 body{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-header{background-color: dodgerblue; width: 100%;}
+header{background-color: dodgerblue;}
 header ul li{list-style: none; color:whitesmoke}
 header ul li a{color:whitesmoke; text-decoration: none; font-weight: bold; font-size: 1.2rem;}
-footer{background-color: black; color: whitesmoke; padding: 1em; width: 100%;}
+footer{background-color: black; color: whitesmoke; padding: 1em;}
 main{flex-grow: 1;}
 h2{margin-bottom: 0.5em;}
 input[type="text"],input[type="number"],textarea, select{border:none;background-color: rgba(0,0,0,.05);border-radius: 0.3em;}
 input[type="text"]:focus,input[type="number"]:focus,textarea:focus,select:focus{box-shadow: 0 0 0 2px red inset;outline: none;}
 input[type="radio"]{
   display: none;
+}
+
+
+/* HEADER */
+nav{
+  position: relative;
+  height: 0;
+  overflow: hidden!important;
+  transition: 0.4s;
+  overflow-y: auto;
+  background-color: red;
+  height: 100vh;
+  width: 0;
+}
+#checkmenu{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+nav{
+  position: absolute;
+  z-index: 3;
+  top: 0;
+}
+#checkmenu:checked ~ nav{
+  overflow: hidden!important;
+  transition: 0.4s;
+  padding: 0.5em;
+  width: 50vw;
+}
+#display-menu-button{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*CUSTOM COMPONENTS*/
@@ -181,30 +215,34 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   transition: ease-in-out 0.5s;
 }
 .cat-container {
-  width: 300px;
+  max-width: 200px;
   overflow-x: scroll;
   overflow-y: hidden;
   margin: auto;
-  height: 20rem;
+  /*height: 20rem;*/
+  background-color: orange;
 }
 .scroll-snap {
   scroll-snap-type: x mandatory;
 }
 .cat-wrapper {
-  width: 150rem;
+  width: 1500px;
   display: flex;
   justify-content: start;
 }
 .cat-pic {
   display: flex;
-  width: 500px;
+  max-width: 100%;
   overflow: hidden;
   height: 20rem;
   scroll-snap-align: center;
+  /*background-color: purple;*/
+  
 }
 .cat-pic img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  /*background-color: red;*/
 }
 
 
