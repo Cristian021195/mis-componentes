@@ -1,6 +1,4 @@
 import {useState} from 'react'
-
-
 export const Accordion = () => {
     const [state,setState] = useState<boolean>(false);
   return (

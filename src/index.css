@@ -1,9 +1,7 @@
-:root {
-  
-}
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* DEFAULT HTML ELEMENTS*/
@@ -11,10 +9,10 @@ body{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 header{background-color: dodgerblue;}
-header ul li{list-style: none; color:whitesmoke}
+header ul li, nav ul li{list-style: none; color:whitesmoke}
 header ul li a{color:whitesmoke; text-decoration: none; font-weight: bold; font-size: 1.2rem;}
 footer{background-color: black; color: whitesmoke; padding: 1em;}
-main{flex-grow: 1;}
+/*main{flex-grow: 1;}*/
 h2{margin-bottom: 0.5em;}
 input[type="text"],input[type="number"],textarea, select{border:none;background-color: rgba(0,0,0,.05);border-radius: 0.3em;}
 input[type="text"]:focus,input[type="number"]:focus,textarea:focus,select:focus{box-shadow: 0 0 0 2px red inset;outline: none;}
@@ -25,24 +23,13 @@ input[type="radio"]{
 
 /* HEADER */
 nav{
-  position: relative;
-  height: 0;
-  overflow: hidden!important;
-  transition: 0.4s;
-  overflow-y: auto;
-  background-color: red;
+  background-color: black;
   height: 100vh;
-  width: 0;
 }
-#checkmenu{
+/*#checkmenu{
   position: absolute;
   top: 0;
   right: 0;
-}
-nav{
-  position: fixed;
-  z-index: 3;
-  top: 0;
 }
 #checkmenu:checked ~ nav{
   overflow: hidden!important;
@@ -54,10 +41,10 @@ nav{
   position: absolute;
   top: 0;
   right: 0;
-}
+}*/
 
 /*CUSTOM COMPONENTS*/
-#root{
+#roota{
   min-height: 100vh; display: flex; flex-direction: column;
 }
 
@@ -351,7 +338,8 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:before, input[type=checkbox]
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;}
+  justify-content: center;
+}
   .vcard{background-color: coral;
     min-width: 12em;
     max-width: 15em;
