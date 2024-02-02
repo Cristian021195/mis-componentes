@@ -186,6 +186,14 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   transition: background 0s;
 }
 
+.interactive-card{
+  border-radius: 0.5rem;
+  width: auto;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .switch, .switch * {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
@@ -326,6 +334,11 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:before, input[type=checkbox]
   background-color: #fff;
   border: 1px solid #f5f5f5;
 }
+
+.bg-red{background-color: red!important;}
+.br-2{border-radius: 2rem!important;}
+.br-1{border-radius: 1rem!important;}
+.br-05{border-radius: 0.5rem!important;}
 
 /* CARDS */
 .crd{  

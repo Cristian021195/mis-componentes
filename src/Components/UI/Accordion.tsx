@@ -31,3 +31,33 @@ export const BAccordion = () => {
     </article>
   )
 }
+export const AccordionSimple = () => {
+  return (
+    <div className="p-3 b-shadow mb-4 w-100">
+      <div className="acc">
+        <h4>I can get in touch with you any time?</h4>
+        <span className="">▼</span>
+        <div className="acc-body">
+          <div>
+            <p>I reply mails, and messages quickly as possible, but remember I’m from Argentina (GMT-3). So if you not get any response now I’ll reply you next morning for sure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const AccordionSimpleB = () => {
+  return (
+    <div className="p-3 b-shadow mb-4 w-100">
+      <div className="acc">
+        <div className="acc-body">
+          <div>
+            <p>I reply mails, and messages quickly as possible, but remember I’m from Argentina (GMT-3). So if you not get any response now I’ll reply you next morning for sure.</p>
+          </div>
+        </div>
+        <h4>I can get in touch with you any time?</h4>
+      </div>
+    </div>
+  )
+}
