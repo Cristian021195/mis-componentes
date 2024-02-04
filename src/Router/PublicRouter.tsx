@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Sidebar } from '../Components/Layout'
-import { FieldsetsPage, CardsPage, AcordeonPage } from '../Pages/'
+import { FieldsetsPage, CardsPage, AcordeonPage, LoadersPage } from '../Pages/'
 
 export const PublicRouter = () => {
   return (
@@ -34,7 +34,7 @@ export const PublicRouter = () => {
                         }></Route>
                         <Route path="/acordeon" element={<AcordeonPage/>}></Route>
                         <Route path="/forms" element={<p>forms</p>}></Route>
-                        <Route path="/loaders" element={<p>loaders</p>}></Route>
+                        <Route path="/loaders" element={<LoadersPage/>}></Route>
                         <Route path="/offcanvas" element={<p>offcanvas</p>}></Route>
                         <Route path="/cards" element={<CardsPage/>}></Route>
                         <Route path="/fieldsets" element={<FieldsetsPage/>}></Route>

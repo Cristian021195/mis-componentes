@@ -172,6 +172,10 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   animation-delay: 1.15s;
 }
 
+.gap-1{gap: 1rem;}
+.gap-2{gap: 2rem;}
+.gap-3{gap: 3rem;}
+
 /* Ripple effect */
 .ripple-button {
   background-position: center;
@@ -188,10 +192,9 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
 
 .interactive-card{
   border-radius: 0.5rem;
-  width: auto;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.interactive-card fieldset{
+  width: 100%
 }
 
 .switch, .switch * {
@@ -636,7 +639,6 @@ input[type=range]::-webkit-slider-runnable-track , input[type=range]::-moz-range
 
 .pulse {
   animation: pulse-animation 2s infinite;
-  margin: 8px auto;
 }
 
 @keyframes pulse-animation {
