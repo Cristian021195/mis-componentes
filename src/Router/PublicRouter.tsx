@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Sidebar } from '../Components/Layout'
-import { FieldsetsPage, CardsPage, AcordeonPage, LoadersPage } from '../Pages/'
+import { FieldsetsPage, CardsPage, AcordeonPage, LoadersPage, ButtonsPage } from '../Pages/'
 
 export const PublicRouter = () => {
   return (
@@ -26,12 +26,7 @@ export const PublicRouter = () => {
                             </div>
                             </>
                         }></Route>
-                        <Route path="/botones" element={
-                            <div>
-                                <button className="ripple-button">Button</button>
-                                <button>FLOATING ACTION BTN</button>
-                            </div>
-                        }></Route>
+                        <Route path="/botones" element={<ButtonsPage/>}></Route>
                         <Route path="/acordeon" element={<AcordeonPage/>}></Route>
                         <Route path="/forms" element={<p>forms</p>}></Route>
                         <Route path="/loaders" element={<LoadersPage/>}></Route>
