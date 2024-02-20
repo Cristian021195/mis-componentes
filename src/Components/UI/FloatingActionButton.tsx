@@ -51,13 +51,15 @@ interface IPropsCss {
     items?: JSX.Element[],//svg
     children?: React.ReactElement,//svg
     width:number,
-    horizontal?: "left" | "right"
+    horizontal?: "left" | "right" | "",
+    variant?: 1 | 2 | 3 | 4
 }
 
-export const FloatingActionButtonCSS = ({bgColor="dodgerblue", items, children, width, horizontal="right"}:IPropsCss) => {
-    bgColor;
+export const FloatingActionButtonCSS = ({bgColor="dodgerblue", items, children, width, horizontal="", variant=1}:IPropsCss) => {
+    const clss = "wrap-collabsible "+horizontal;
+    
     return (
-        <div className="wrap-collabsible" style={{width:width+"rem"}}>
+        <div className={variant === 1 ? clss+" t-r-180" : clss+""} style={{width:width+"rem"}}>
             <input id="collapsible" className="toggle" type="checkbox"/>
             <label htmlFor="collapsible" className="btn lbl-toggle" style={{width:width+"rem", height:width+"rem"}}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -66,11 +68,26 @@ export const FloatingActionButtonCSS = ({bgColor="dodgerblue", items, children, 
             </label>
             <div className="collapsible-content">
               <div className="content-inner">
-                  <button className="btnfab r-btn circle btnl" style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}>1</button>
-                  <button className="btnfab r-btn circle btnl" style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}>2</button>
-                  <button className="btnfab r-btn circle btnl" style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}>3</button>
-                  <button className="btnfab r-btn circle btnl" style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}>4</button>
-                  <button className="btnfab r-btn circle btnl" style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}>5</button>
+                  <button className={variant === 1 ? "btnfab r-btn circle btnl t-r-180" : "btnfab r-btn circle btnl"} 
+                    style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}
+                  >1
+                  </button>
+                  <button className={variant === 1 ? "btnfab r-btn circle btnl t-r-180" : "btnfab r-btn circle btnl"} 
+                    style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}
+                  >2
+                  </button>
+                  <button className={variant === 1 ? "btnfab r-btn circle btnl t-r-180" : "btnfab r-btn circle btnl"} 
+                    style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}
+                  >3
+                  </button>
+                  <button className={variant === 1 ? "btnfab r-btn circle btnl t-r-180" : "btnfab r-btn circle btnl"} 
+                    style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}
+                  >4
+                  </button>
+                  <button className={variant === 1 ? "btnfab r-btn circle btnl t-r-180" : "btnfab r-btn circle btnl"} 
+                    style={{backgroundColor:'purple', width:width-1+"rem", height:width-1+"rem"}}
+                  >5
+                  </button>
               </div>
             </div>
         </div>

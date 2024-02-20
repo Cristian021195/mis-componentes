@@ -1,57 +1,58 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const Sidebar = () => {
   return (
     <nav className='col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2'>
+        <h2 style={{color:'whitesmoke'}}>Mis Componentes</h2>
         <ul>
             <li>
-                <Link to="/">home</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/">home</NavLink>
             </li>
             <li>
-                <Link to="/botones">botones</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/botones">botones</NavLink>
             </li>
             <li>
-                <Link to="/acordeon">acordeon</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/acordeon">acordeon</NavLink>
             </li>
             <li>
-                <Link to="/forms">forms</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/forms">forms</NavLink>
             </li>
             <li>
-                <Link to="/loaders">loaders</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/loaders">loaders</NavLink>
             </li>
             <li>
-                <Link to="/offcanvas">offcanvas</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/offcanvas">offcanvas</NavLink>
             </li>
             <li>
-                <Link to="/cards">cards</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/cards">cards</NavLink>
             </li>
             <li>
-                <Link to="/fieldsets">fieldsets</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/fieldsets">fieldsets</NavLink>
             </li>
             <li>
-                <Link to="/alerts">alerts</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/alerts">alerts</NavLink>
             </li>
             <li>
-                <Link to="/bottom">bottom</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/bottom">bottom</NavLink>
             </li>
             <li>
-                <Link to="/modals">modals</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/modals">modals</NavLink>
             </li>
             <li>
-                <Link to="/toasts">toasts</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/toasts">toasts</NavLink>
             </li>
             <li>
-                <Link to="/tooltips">tooltips</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/tooltips">tooltips</NavLink>
             </li>
             <li>
-                <Link to="/carousel">carousel</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/carousel">carousel</NavLink>
             </li>
             <li>
-                <Link to="/dropdown">dropdown</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/dropdown">dropdown</NavLink>
             </li>
             <li>
-                <Link to="/progess">progess</Link>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/progess">progess</NavLink>
             </li>            
         </ul>
     </nav>

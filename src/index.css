@@ -26,6 +26,41 @@ nav{
   background-color: black;
   height: 100vh;
 }
+nav li{
+  margin: 1rem;
+}
+nav li a{color: whitesmoke;}
+nav .active {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: .2em;
+  padding: .2em .6em;
+  transition: all .15s;
+}
+
+progress {
+  border-radius: 0.2rem;
+  height: 1.2rem;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+progress::-webkit-progress-bar {
+  background-color: whitesmoke;
+  border-radius: 0.2rem;
+}
+progress::-webkit-progress-value {
+  background-color: #E57373;
+  border-radius: 0.2rem 0rem 0 0.2rem;
+  /*box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );*/
+}
+progress::-moz-progress-bar {
+  /* style rules */
+}
+.l-progress{
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
 /*#checkmenu{
   position: absolute;
   top: 0;
@@ -116,6 +151,18 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.t-r-180{
+  transform: rotate(180deg)!important;
+}
+.t-r-180m{
+  transform: rotate(-180deg)!important;
+}
+.t-r-90{
+  transform: rotate(90deg)!important;
+}
+.t-r-90m{
+  transform: rotate(-90deg)!important;
+}
 
 /* FloatingActionButtonCSS */
 #collapsible{
@@ -127,11 +174,12 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   flex-wrap: wrap;
   position: absolute;
   bottom: 1rem;
-  right: 1rem;
-  transform: rotate(180deg);
   text-align: center;
+  /*width: 100%!important; deja horizontal*/
   /*180, sin width o 100%important*/
 }
+.left{left: 1rem;}
+.right{right: 1rem;}
 
 .lbl-toggle {
   border-radius: 50%;
@@ -154,7 +202,6 @@ fieldset:hover .fset-anm , fieldset:hover .fset-anm-1{rotate: 0deg;}
   max-height: 350px;/*max-height: max-content;*/
 }
 .content-inner > *{
-  transform: rotate(180deg);
   margin: 0.3rem;
 }
 .c-i-rotate{

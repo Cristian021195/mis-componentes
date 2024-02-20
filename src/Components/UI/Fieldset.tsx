@@ -3,26 +3,28 @@ interface IProps {
   animation?: 'fset-anm' | 'fset-anm-1',
   direction?: scaleOpt,
   box?: string,
+  title?: string,
+  description?:string,
   content?: string,
   contentLgd?: scaleOpt
   children?: React.ReactElement
 }
 
-export const Fieldset = ({animation, direction, box, content, contentLgd}:IProps) => {
+export const Fieldset = ({animation, direction, box, content, contentLgd, title="Legend: (-1,-1)", description="description..."}:IProps) => {
   return (
-    <fieldset className={`${box} ${direction}`}>
-        <legend className={` ${contentLgd} ${animation}`}>Legend: (-1,-1)</legend>
+    <fieldset className={`${box} ${direction} my-4`}>
+        <legend className={` ${contentLgd} ${animation}`}>{title}</legend>
         <div className={`${content} ${direction}`}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iure.</p>
+          <p>{description}</p>
         </div>
     </fieldset>
   )
 }
 
-export const FieldsetWithChild = ({animation, direction, box, content, contentLgd, children}:IProps) => {
+export const FieldsetWithChild = ({animation, direction, box, content, contentLgd, children, title="Legend: (-1,-1)"}:IProps) => {
   return (
-    <fieldset className={`${box} ${direction}`}>
-        <legend className={` ${contentLgd} ${animation}`}>Legend: (-1,-1)</legend>
+    <fieldset className={`${box} ${direction} my-4`}>
+        <legend className={` ${contentLgd} ${animation}`}>{title}</legend>
         <div className={`${content} ${direction}`}>
           {children}
         </div>

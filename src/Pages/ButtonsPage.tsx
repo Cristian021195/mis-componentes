@@ -10,7 +10,9 @@ export const ButtonsPage = () => {
 function Content(){
     return (
         <article>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem facere recusandae impedit, aliquam, veritatis error repudiandae aperiam totam dolores unde, sunt non similique quasi tenetur consequuntur enim quis esse facilis.</p>
+            <p>Este componente trabaja solo con css para evitar el uso excesivo de javascript, la unica desventaja es que solo podemos usar uno. Si queremos usar mas de uno, debemos
+                crear otro componente distinto y duplicar la clase css encargada
+            </p>
             <div>
                 <button className="btnl" style={{backgroundColor:'dodgerblue'}}>Azul</button>
                 <br />
@@ -40,7 +42,11 @@ function Content(){
                     </svg>
                 </FloatingActionButton>
                 */}
-                <FloatingActionButtonCSS width={4}/>
+                {
+                    /*<FloatingActionButtonCSS width={4} variant={2}/>*/
+                }
+                <FloatingActionButtonCSS width={4} variant={2} horizontal='right'/>
+                <FloatingActionButtonCSS width={4} variant={1} horizontal=''/>                
             </div>
         </article>
     )
