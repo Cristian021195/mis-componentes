@@ -1,3 +1,4 @@
+import { Toast, ToastInteractive } from '../Components';
 import { Section } from '../Components/Layout'
 import { Fieldset, FieldsetWithChild } from '../Components/UI/Fieldset';
 export const ToastPage = () => {
@@ -22,9 +23,12 @@ function Content(){
               fijandolo para que se puedan ver mensajes de mayor longitud
             </p>
             <FieldsetWithChild title='Simples'>
-              <p>Son aquellos que se cierran luego de 3 segundos por defecto, tienen color rojo y letras blancas por defecto y no pueden hacer
-                otra cosa mas que cerrarse
-              </p>
+              <>
+                <p>Son aquellos que se cierran luego de 3 segundos por defecto, tienen color rojo y letras blancas por defecto y no pueden hacer
+                  otra cosa mas que cerrarse
+                </p>
+                <button className='btn'>Toast Simple</button>
+              </>
             </FieldsetWithChild>
             <FieldsetWithChild title='Iteractivos'>
               <p>Similares a los Simples, estos nos permiten fijarlos y cancelar el cierre automatico y tambien nos permite cambiar 
@@ -36,6 +40,9 @@ function Content(){
                 la pantalla, haciendo mayor su alto pero no tanto. y nos brinda la opcion de copiar su contenido.
               </p>
             </FieldsetWithChild>
+            {/*<ToastInteractive bgColor='#E53935' title='La Acción se ejecutó con exito'/>*/}
+            <Toast bgColor='#E53935' title='La Acción se ejecutó con exito' initPos={3}/>
+            <ToastInteractive bgColor='#E53935' title='La Acción se ejecutó con exito'/>
         </article>
     )
 }
