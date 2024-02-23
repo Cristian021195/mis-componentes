@@ -53,7 +53,10 @@ export const Sidebar = () => {
             </li>
             <li>
                 <NavLink className={({isActive}) => isActive ? "active" : ""} to="/progess">progess</NavLink>
-            </li>            
+            </li>
+            <li>
+                <NavLink className={({isActive}) => isActive ? "active" : ""} to="/bottom-bar-navigation">Bottom Bar Navigation</NavLink>
+            </li>
         </ul>
     </nav>
   )
