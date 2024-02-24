@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Sidebar } from '../Components/Layout'
-import { FieldsetsPage, CardsPage, AcordeonPage, LoadersPage, ButtonsPage, ProgressPage, ToastPage, BottomBarPage } from '../Pages/'
+import { FieldsetsPage, CardsPage, AcordeonPage, LoadersPage, ButtonsPage, ProgressPage, ToastPage, BottomBarPage, TooltipsPage } from '../Pages/'
 
 export const PublicRouter = () => {
   return (
@@ -38,7 +38,7 @@ export const PublicRouter = () => {
                         <Route path="/navbar" element={<p>navbar</p>}></Route>
                         <Route path="/modals" element={<p>modals</p>}></Route>
                         <Route path="/toasts" element={<ToastPage/>}></Route>
-                        <Route path="/tooltips" element={<p>tooltips</p>}></Route>
+                        <Route path="/tooltips" element={<TooltipsPage/>}></Route>
                         <Route path="/carousel" element={<p>carousel</p>}></Route>
                         <Route path="/dropdown" element={<p>dropdown</p>}></Route>
                         <Route path="/progess" element={<ProgressPage />}></Route>

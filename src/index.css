@@ -1071,3 +1071,174 @@ input[type=range]::-webkit-slider-runnable-track , input[type=range]::-moz-range
       bottom: 0rem;
   }
 }
+
+/* tooltip */
+
+.tt-c {
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: min-content;
+}
+.tt-c:focus {
+  outline: none;
+}
+.tt-c span {
+  font-size: 0.8em;
+  background-color: red;
+  color: #ffffff;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em;
+  opacity: 0;
+  min-width: 70px;
+  transition: 0.3s;
+  border-radius:0.5em;
+  text-align: center;
+}
+.tt-c span::before {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  border-color: red transparent transparent;
+  border-style: solid;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.tt-c:hover {
+  overflow: visible;
+}
+.no-select{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.no-select:focus{outline: none !important;}
+.tt-c:hover span,
+.tt-c:hover span::before {
+  opacity: 1;
+}
+[data-position="bottom"] span {
+  top: auto;
+  top: 2rem;
+}
+[data-position="bottom"] span::before {
+  bottom: auto;
+  bottom: 2.5rem;
+  border-color: transparent transparent red;
+}
+
+
+/* w3 tooltip */
+.ttip {
+  position: relative;
+  display: inline-block;
+}
+
+.ttiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px; 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.ttip-top{
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.ttip-btm{
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.ttip-lft{
+  top: -5px;
+  right: 105%;
+}
+
+.ttip-rgt{
+  top: -5px;
+  left: 105%;
+}
+
+/*bottom arrow tooltip */
+
+.ttip-at::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.ttip-ab::after{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.ttip-al::after{
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.ttip-ar::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.ttip:hover .ttiptext {
+  animation-name: showxd;
+  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showxd {
+  from{
+    transform: scale(0.9)
+  }to{
+    visibility: visible;
+    transform: scale(1)
+  }
+}
