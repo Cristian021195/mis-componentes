@@ -9,7 +9,7 @@ export const PublicRouter = () => {
         <div className="container-fluid">
             <div className="row">
                 <Sidebar/>
-                <div className='col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10'>
+                <div className='col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 vh100-scroll-y'>
                     <Routes>
                         <Route path="/" element={
                             <>
